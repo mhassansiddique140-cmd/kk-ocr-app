@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaxDesk PK — Online Tax Filing in Pakistan</title>
+  <meta name="description" content="File your income tax return, register for NTN, become an active filer and calculate your salary tax in Pakistan.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="brand"><span class="brand-mark">T</span> TaxDesk<span class="brand-pk">PK</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#calculator">Tax Calculator</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#order" class="btn btn-sm">File Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Tax year 2026 filing is open</p>
+          <h1>Become an active filer, without the paperwork.</h1>
+          <p class="lead">Tax consultants file your income tax return, wealth statement and NTN registration with FBR. You send your documents and we do the rest.</p>
+          <div class="hero-cta">
+            <a href="#order" class="btn">Start filing</a>
+            <a href="#calculator" class="btn btn-ghost">Calculate my tax</a>
+          </div>
+          <ul class="trust">
+            <li><strong>Rs 2,500</strong> starting price</li>
+            <li><strong>24 hr</strong> turnaround</li>
+            <li><strong>100%</strong> online</li>
+          </ul>
+        </div>
+        <div class="hero-card card">
+          <h3>Quick salary tax check</h3>
+          <label for="quick-salary">Monthly salary (PKR)</label>
+          <input id="quick-salary" type="number" min="0" inputmode="numeric" placeholder="e.g. 150000">
+          <div class="quick-result" id="quick-result">Enter your salary to see your monthly tax.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Our services</h2>
+        <p class="section-sub">Everything you need to stay on the Active Taxpayers List (ATL).</p>
+        <div class="grid services-grid" id="services-grid"></div>
+      </div>
+    </section>
+
+    <section id="calculator" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Income tax calculator</h2>
+        <p class="section-sub">Based on the slabs in the Finance Act for each tax year.</p>
+        <div class="calc card">
+          <div class="calc-form">
+            <div class="field">
+              <label for="calc-year">Tax year</label>
+              <select id="calc-year"></select>
+            </div>
+            <div class="field">
+              <label for="calc-type">Income type</label>
+              <select id="calc-type">
+                <option value="salaried">Salaried</option>
+                <option value="business">Business / freelancer / AOP</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="calc-period">Income period</label>
+              <select id="calc-period">
+                <option value="monthly">Monthly</option>
+                <option value="annual">Annual</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="calc-income">Income (PKR)</label>
+              <input id="calc-income" type="number" min="0" inputmode="numeric" placeholder="e.g. 200000">
+            </div>
+          </div>
+          <div class="calc-results" id="calc-results">
+            <div class="stat"><span>Monthly income</span><strong id="r-monthly-income">—</strong></div>
+            <div class="stat"><span>Monthly tax</span><strong id="r-monthly-tax">—</strong></div>
+            <div class="stat"><span>Monthly take-home</span><strong id="r-monthly-net">—</strong></div>
+            <div class="stat"><span>Annual income</span><strong id="r-annual-income">—</strong></div>
+            <div class="stat"><span>Annual tax</span><strong id="r-annual-tax">—</strong></div>
+            <div class="stat"><span>Effective rate</span><strong id="r-rate">—</strong></div>
+          </div>
+          <p class="note" id="r-surcharge" hidden></p>
+          <details class="slabs">
+            <summary>View tax slabs</summary>
+            <table>
+              <thead><tr><th>Annual income</th><th>Tax</th></tr></thead>
+              <tbody id="slab-table"></tbody>
+            </table>
+          </details>
+          <p class="disclaimer">Estimates only. They leave out tax credits, Zakat, pension contributions and withholding already deducted. Check with FBR or a consultant before filing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="container">
+        <h2 class="section-title">How it works</h2>
+        <ol class="steps">
+          <li><span>1</span><h4>Choose a service</h4><p>Pick return filing, NTN registration or another service below.</p></li>
+          <li><span>2</span><h4>Share documents</h4><p>Send your CNIC, salary certificate or bank statement on WhatsApp.</p></li>
+          <li><span>3</span><h4>We prepare &amp; file</h4><p>A consultant prepares your return and wealth statement for your review.</p></li>
+          <li><span>4</span><h4>You're a filer</h4><p>You get the FBR acknowledgement, and your name appears on the ATL.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="pricing" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Simple pricing</h2>
+        <p class="section-sub">One fee. No hidden charges.</p>
+        <div class="grid pricing-grid" id="pricing-grid"></div>
+      </div>
+    </section>
+
+    <section id="order" class="section">
+      <div class="container order-grid">
+        <div>
+          <h2 class="section-title left">Get started</h2>
+          <p>Fill in your details and we'll open a WhatsApp chat with a tax consultant. Your details go only into that message, and this site stores nothing.</p>
+          <ul class="checklist">
+            <li>CNIC copy</li>
+            <li>Salary certificate or bank statement</li>
+            <li>Details of property, vehicles and investments (for the wealth statement)</li>
+            <li>Utility bills (if you want to claim withholding tax paid)</li>
+          </ul>
+        </div>
+        <form id="order-form" class="card" novalidate>
+          <div class="field">
+            <label for="o-name">Full name</label>
+            <input id="o-name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="o-phone">Mobile number</label>
+            <input id="o-phone" name="phone" required inputmode="tel" placeholder="03XX-XXXXXXX" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="o-service">Service</label>
+            <select id="o-service" name="service" required></select>
+          </div>
+          <div class="field">
+            <label for="o-notes">Notes (optional)</label>
+            <textarea id="o-notes" name="notes" rows="3"></textarea>
+          </div>
+          <p class="form-error" id="o-error" hidden></p>
+          <button type="submit" class="btn btn-block">Continue on WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq" class="section alt">
+      <div class="container narrow">
+        <h2 class="section-title">Frequently asked questions</h2>
+        <div id="faq-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="brand"><span class="brand-mark">T</span> TaxDesk<span class="brand-pk">PK</span></a>
+        <p>Online tax filing and consultancy for individuals and businesses in Pakistan.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a id="footer-whatsapp" href="#">WhatsApp</a><br><a id="footer-email" href="#">Email</a></p>
+      </div>
+      <div>
+        <h4>Useful links</h4>
+        <p><a href="https://iris.fbr.gov.pk" target="_blank" rel="noopener">FBR IRIS</a><br>
+           <a href="https://www.fbr.gov.pk" target="_blank" rel="noopener">FBR website</a></p>
+      </div>
+    </div>
+    <p class="container copyright">&copy; <span id="year"></span> TaxDesk PK. We are not affiliated with the Federal Board of Revenue.</p>
+  </footer>
+
+  <a class="whatsapp-float" id="whatsapp-float" href="#" aria-label="Chat on WhatsApp">&#128172;</a>
+
+  <script src="js/config.js"></script>
+  <script src="js/tax-rules.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
